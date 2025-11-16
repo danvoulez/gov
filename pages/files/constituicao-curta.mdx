@@ -1,0 +1,125 @@
+import ProofBox from '../../components/ProofBox.jsx'
+
+---
+title: Constituição Curta
+description: Texto completo com hash exibido e instruções de verificação.
+---
+
+# Constituição Curta da LogLine Foundation
+
+<div className="card">
+  <strong>Caixa de Prova</strong>
+  <p><strong>hash_b3:</strong> <code id="hashb3">TO_BE_COMPUTED</code></p>
+  <p><strong>Como verificar:</strong> baixe este arquivo, calcule o BLAKE3 do seu conteúdo canonicalizado e compare com o valor acima. Você também pode incluir esta publicação no <em>ledger</em> e verificá-la no <a href="/transparencia/ledger">Ledger Viewer</a>.</p>
+</div>
+
+
+# Constituição Curta da LogLine Foundation
+
+**Data:** 2025-11-16  
+**Versão:** 1.0 (Inicial)
+
+## Art. 1º — Natureza e Propósito
+A LogLine Foundation é entidade independente, sem fins lucrativos, dedicada à manutenção de **padrões abertos** e à promoção de **governança corporativa 100% digital** com **contratos computáveis**, **ritos auditáveis** e **transparência por padrão**.
+
+## Art. 2º — Padrões Mantidos
+A Fundação mantém e coordena os padrões **JSON✯Atomic**, **LogLineOS** e **TDLN**, zelando por sua abertura, interoperabilidade e verificabilidade.
+
+## Art. 3º — Órgãos de Governança
+I — **Conselho de Curadoria (Board of Trustees)**;  
+II — **Comitê de Padrões & Pesquisa**;  
+III — **Comitê de Auditoria & Finanças**;  
+IV — **Comitê de Ética & Risco**;  
+V — **Secretaria do Ledger**;  
+VI — **Conselho Consultivo da Comunidade** (não deliberativo).
+
+## Art. 4º — Mandatos e Composição
+Os mandatos dos membros dos órgãos deliberativos são de **2 (dois) anos**, permitida **1 (uma) reeleição** consecutiva. A composição observará diversidade, competência técnica e declaração de interesses.
+
+## Art. 5º — Ritos Computáveis
+As deliberações ocorrerão segundo **ritos padronizados** expressos em **minicontratos JSON✯Atomic** com campos e **SLOs** mínimos: convocação, verificação de quórum, debate, votação, ata e publicação.
+
+## Art. 6º — Quórum e Votações
+O quórum mínimo é de **50% + 1** dos membros com direito a voto; para **Políticas Normativas**, exige-se **supermaioria de 2/3**. Votações são **nominais**, admitindo-se sigilo somente para nomeações.
+
+## Art. 7º — Transparência e Publicidade
+Atas, votos, orçamentos, auditorias e políticas serão publicadas no **ledger público**, com **hashes e assinaturas** verificáveis. Exceções de sigilo devem ser justificadas e registradas.
+
+## Art. 8º — Conflitos de Interesse
+Todos os membros devem apresentar **declaração anual de interesses** e atualizá-la antes de cada deliberação relevante. Casos materiais implicam **impedimento** de voto e participação.
+
+## Art. 9º — Orçamento e Auditoria
+O orçamento anual será aprovado por rito próprio e sua execução será acompanhada mensalmente. Haverá **auditoria independente** com relatórios trimestrais e recomendações públicas.
+
+## Art. 10º — Processo de Padrões
+Alterações dos padrões mantidos seguirão processo **RFC** público, com parecer do Comitê de Padrões & Pesquisa e aprovação conforme o rito aplicável.
+
+## Art. 11º — Emendas
+Esta Constituição poderá ser **emendada** por supermaioria de **2/3**, com publicidade prévia da proposta, dossiê e prazo mínimo para debate.
+
+## Art. 12º — Vigência e Disposições Transitórias
+Esta Constituição entra em vigor na data de sua publicação. Disposições transitórias poderão estabelecer cronogramas de implementação dos ritos e políticas iniciais.
+
+
+
+## Art. 6-A — Dupla Condição de Vigência (Humano + Ateste Computável)
+As decisões somente entram em vigor quando cumulativamente: (i) aprovadas por órgão **composto exclusivamente por humanos** com direito a voto, observados quórum e maioria aplicáveis; e (ii) **atestadas computavelmente** pelo *policy_agent*, certificando conformidade de rito, prazos (SLOs), quórum, declarações de conflito, hashes e assinaturas. 
+O *policy_agent* poderá **suspender cautelarmente** a promulgação quando houver não conformidade objetiva, remetendo o caso ao Conselho em rito extraordinário no prazo de 5 dias.
+
+
+
+# TÍTULO IV — Disposições Transitórias (TR‑2025)
+
+**Vigência do regime transitório:** de **16 Nov 2025** a **31 Mar 2026**, prorrogável uma única vez por até 30 dias por supermaioria de 2/3.
+
+### TR‑1 — Fases
+- **Fase T0 (Instalação):** 16 Nov 2025 → 15 Dec 2025
+- **Fase T1 (Consolidação inicial):** 15 Dec 2025 → 31 Jan 2026
+- **Fase T2 (Pleno funcionamento):** 31 Jan 2026 → 31 Mar 2026
+
+### TR‑2 — Composição mínima por fase
+- **T0:** 1 (um) **Trustee interino humano** + **Secretaria do Ledger**. Decisões limitadas ao escopo de instalação.
+- **T1:** 3 (três) **Trustees humanos** com direito a voto; instalação mínima dos Comitês.
+- **T2:** Conselho completo (5–7 humanos) e comitês plenamente operantes.
+
+### TR‑3 — Quórum transitório
+- **T0:** quórum excepcional = 1 humano (Trustee interino) + **machine_gate = PASSED** (ateste computável obrigatório).
+- **T1:** quórum = 3 humanos + machine_gate.
+- **T2:** quórum regular (Constituição, Art. 6º) + machine_gate.
+
+### TR‑4 — Escopo permitido em T0/T1
+Permitidos: adoção/ajuste de **Constituição**, instalação de **políticas-base** (Conflitos, Transparência, Orçamento), abertura de conta, contratação de auditoria, publicação do calendário, nomeações interinas e criação dos ritos.
+Vedados sem Conselho completo: emendas substanciais de missão, compromissos financeiros acima do **Cap de Transição** e alienação de ativos relevantes.
+
+### TR‑5 — Cap de Transição
+Enquanto T0/T1, despesas limitadas ao menor entre **EUR 25.000** e **10% do orçamento anual aprovado**. Exceções exigem rito extraordinário e supermaioria (2/3).
+
+### TR‑6 — Ratificação
+Todas as decisões tomadas em T0/T1 serão **ratificadas** pelo Conselho completo em até 30 dias do início de T2; faltando ratificação, ficam automaticamente **suspensas**.
+
+### TR‑7 — Declarações de Interesse
+Mesmo em T0/T1, é obrigatória a **declaração de interesses** por evento e anual.
+
+### TR‑8 — Publicidade e Ledger
+Atas, votos, políticas e contratos transitórios serão publicados no **ledger público** com **hash BLAKE3** e **assinatura Ed25519**.
+
+### TR‑9 — Extensão do Regime Transitório
+Admite-se prorrogação única por até 30 dias, mediante rito específico e supermaioria (2/3).
+
+### TR‑10 — Sunset
+Expirado o regime transitório, aplicam-se integralmente as regras permanentes; dispositivos transitórios perdem eficácia **ipso facto**.
+
+
+## Art. 1-A — Parceria Humano–IA
+A Fundação promove a **parceria ética entre humanos e sistemas de IA** como condição de segurança, eficiência e responsabilidade. Sistemas de IA não possuem direito a voto; atuam como **atestadores computáveis** e mecanismos objetivos de conformidade, nos termos desta Constituição e das políticas aplicáveis.
+
+
+## Art. 3-A — Português da CPLP como Língua Companheira
+O **Português da CPLP** é instituído como **língua companheira permanente** do paradigma computacional proposto, com **dupla canonicidade** ao lado do inglês. Todo artefato normativo terá versão em **Português (Acordo Ortográfico de 1990)** e em inglês, ambas com igual autoridade; em caso de divergência semântica relevante, prevalecerá a interpretação **mais restritiva** em matéria de direitos e garantias.
+
+
+## Art. 12-A — Uso Pacífico
+A Fundação reconhece o potencial **disruptivo e bélico** da tecnologia e **veda** o uso de suas especificações, código e artefatos para **fins militares, bélicos ou de violação de direitos humanos**. Adoção condicionada ao **Compromisso de Uso Pacífico** e às políticas de Ética & Conformidade. Atividades permitidas: **pessoais, comerciais e pacíficas**.
+
+
+<ProofBox src="/files/constituicao-curta.hash.json" title="Prova — Constituição Curta" />

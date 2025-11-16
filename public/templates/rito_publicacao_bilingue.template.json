@@ -1,0 +1,10 @@
+{
+  "type": "RIT",
+  "subtype": "publicacao_bilingue",
+  "payload": {
+    "lang": [
+      "pt-PT-cplp",
+      "en"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+---
+title: Rito — Publicação Bilíngue (PT–EN)
+description: Como publicar documentos com dupla canonicidade e prova de ligação.
+---
+
+# Rito — Publicação Bilíngue (PT–EN)
+
+**Objetivo:** publicar um artefato com versões **PT (CPLP, AO90)** e **EN** com **prova de ligação** mútua e, quando aplicável, **prova TDLN**.
+
+## Campos obrigatórios
+- `lang`: `['pt-PT-cplp','en']`
+- `pt.hash_b3`, `en.hash_b3`
+- `crosslink_proof`: `pt_points_to_en=true` e `en_points_to_pt=true`
+- `tdln_proof`: hash da tradução determinística (quando houver)
+
+> Template: `public/templates/rito_publicacao_bilingue.template.json`

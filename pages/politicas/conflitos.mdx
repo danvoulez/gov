@@ -1,0 +1,27 @@
+---
+title: Política de Conflitos de Interesse (v1.0)
+description: Declaração prévia por evento e anual, impedimento em caso material, e auditoria.
+---
+
+import PeaceSeal from '../../components/PeaceSeal.jsx'
+
+# Política de Conflitos de Interesse (v1.0) <PeaceSeal />
+
+**Objetivo.** Preservar independência e legitimidade das deliberações.
+
+## Regras centrais
+- **Declaração anual** e **por evento** (antes da deliberação).
+- **Conflito material → impedimento** de voto e participação no item.
+- **Registro**: a declaração é anexada à ata com **hash** e **assinatura**.
+- **Verificação**: o *policy_agent* atesta `conflict_ok` no *machine gate*.
+
+## Campos mínimos (JSON✯Atomic)
+```json
+{
+  "conflict_declarations":[{"member_id":"M-001","agenda_item":"AG-001","conflict_type":"material|potencial","signature":"hex...","declared_at":"YYYY-MM-DDTHH:MMZ"}]
+}
+```
+
+## SLOs
+- Prazos de declaração: **antes** da pauta congelar (*agenda_freeze*).
+- Publicação: resumo em **24h** e ata completa em **72h**.

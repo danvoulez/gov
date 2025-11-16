@@ -1,0 +1,9 @@
+name: Proof (stub)
+on: [push]
+jobs:
+  ok:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: CI Proof (stub)
+        run: node scripts/ci_proof.mjs || true

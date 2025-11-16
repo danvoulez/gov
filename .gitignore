@@ -1,0 +1,9 @@
+# LogLine Foundation defaults
+*.log
+.DS_Store
+.env
+.env.*
+.next/
+build/
+dist/
+node_modules/

@@ -1,0 +1,28 @@
+name: PR Checks — JSON✯Atomic Lint
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'public/ledger/**'
+      - 'public/templates/**'
+      - 'public/schemas/**'
+      - 'scripts/jsonatomic_lint.mjs'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm install ajv ajv-formats
+      - name: Run linter
+        run: node scripts/jsonatomic_lint.mjs --schemas=public/schemas --ledger=public/ledger --templates=public/templates --out=public/status/lint.report.json
+      - name: Upload lint report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jsonatomic-lint-report
+          path: public/status/lint.report.json

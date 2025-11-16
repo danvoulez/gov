@@ -1,0 +1,12 @@
+---
+title: Provas ao vivo
+description: Relatórios do ledger e hashes calculados por CI.
+---
+
+import StatusGrid from '../components/StatusGrid.jsx'
+
+# Provas ao vivo
+
+Esta página lê `public/status/index.json` (gerado pela CI) e mostra o diagnóstico de verificação do **ledger**.
+
+<StatusGrid indexSrc="/status/index.json" />

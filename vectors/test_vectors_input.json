@@ -1,0 +1,104 @@
+{
+  "dsVectors": [
+    {
+      "id": "A1",
+      "payload": {
+        "type": "DRI/2.1",
+        "action": "publish_policy",
+        "policy_id": "pol-001",
+        "params": {
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "R-1",
+              "effect": "allow",
+              "capability": "ledger.commit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "A2",
+      "payload": {
+        "type": "DRI/2.1",
+        "action": "schedule_execution",
+        "task_id": "task-abc",
+        "when": "2025-11-16T00:00:00Z",
+        "params": {
+          "target": "orchestrator://default",
+          "gas": "100000"
+        }
+      }
+    }
+  ],
+  "tieBreakVectors": [
+    {
+      "id": "TB1",
+      "canonicalInput": {
+        "text": "publish policy pol-001 allow ledger commit"
+      },
+      "candidates": [
+        {
+          "priority": 1,
+          "specificity": 10,
+          "grammarSemVer": "1.1",
+          "grammarIdHash": "h:default",
+          "ruleId": "R-10",
+          "grammarId": "default"
+        },
+        {
+          "priority": 1,
+          "specificity": 12,
+          "grammarSemVer": "1.1",
+          "grammarIdHash": "h:default",
+          "ruleId": "R-12",
+          "grammarId": "default"
+        },
+        {
+          "priority": 1,
+          "specificity": 12,
+          "grammarSemVer": "1.0",
+          "grammarIdHash": "h:legacy",
+          "ruleId": "R-9",
+          "grammarId": "legacy"
+        }
+      ]
+    },
+    {
+      "id": "TB2",
+      "canonicalInput": {
+        "text": "schedule task task-abc at 2025-11-16T00:00:00Z"
+      },
+      "candidates": [
+        {
+          "priority": 1,
+          "specificity": 5,
+          "grammarSemVer": "1.1",
+          "grammarIdHash": "h:scheduler",
+          "ruleId": "S-1",
+          "grammarId": "scheduler"
+        },
+        {
+          "priority": 1,
+          "specificity": 5,
+          "grammarSemVer": "1.2",
+          "grammarIdHash": "h:scheduler",
+          "ruleId": "S-1",
+          "grammarId": "scheduler"
+        }
+      ]
+    }
+  ],
+  "merkleVectors": [
+    {
+      "id": "M1",
+      "leavesHex": [
+        "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+        "22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222",
+        "33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333"
+      ]
+    }
+  ]
+}

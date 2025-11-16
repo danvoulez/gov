@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: logline-httpd API
+  version: "1.0.0"
+servers:
+  - url: https://api.logline/v1
+paths:
+  /compile:
+    post:
+      summary: Deterministic pipeline (Stages 1–3)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                input: { type: object }
+                options: { type: object }
+      responses:
+        '200':
+          description: OK
+  /seal:
+    post:
+      summary: Stage 4 (Hashing & Signatures)
+      responses:
+        '200':
+          description: OK
+  /commit:
+    post:
+      summary: Stage 5 (Ledger Committal)
+      responses:
+        '200':
+          description: OK
+  /verify:
+    post:
+      summary: Verify canonicalization, hashing, signatures
+      responses:
+        '200':
+          description: OK
+  /grammars:
+    get:
+      summary: List grammars
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Publish grammar
+      responses:
+        '200':
+          description: OK
+  /allowlists:
+    get:
+      summary: List allowlists
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Publish allowlist
+      responses:
+        '200':
+          description: OK
+  /events:
+    get:
+      summary: Server-sent events for commits and verification
+      responses:
+        '200':
+          description: OK

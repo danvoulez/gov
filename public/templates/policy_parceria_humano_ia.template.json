@@ -1,0 +1,36 @@
+{
+  "type": "POL",
+  "id": "POL-EUP-1.0",
+  "title": "Política de Parceria Humano–IA (EUP v1.0)",
+  "lang": [
+    "pt-PT-cplp",
+    "en"
+  ],
+  "payload": {
+    "principles": [
+      "primazia_humana",
+      "transparencia_verificavel",
+      "controle_reversibilidade",
+      "privacidade_minimizacao"
+    ],
+    "requirements": [
+      "papel_ia_registrado",
+      "artefatos_prova",
+      "explainability",
+      "machine_gate_required"
+    ]
+  },
+  "usage_decl": {
+    "peaceful_only": true,
+    "categories": [
+      "pessoal",
+      "comercial",
+      "educacional",
+      "pesquisa_civil"
+    ]
+  },
+  "hash_b3": "TO_BE_COMPUTED",
+  "signature_ed25519": "TO_BE_COMPUTED",
+  "public_key": "PUBKEY_HEX",
+  "machine_gate": "REQUIRED"
+}

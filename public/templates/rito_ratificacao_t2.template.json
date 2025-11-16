@@ -1,0 +1,8 @@
+{
+  "type": "RIT",
+  "subtype": "ratificacao_t2",
+  "payload": {
+    "ratify_list": [],
+    "window_days": 15
+  }
+}

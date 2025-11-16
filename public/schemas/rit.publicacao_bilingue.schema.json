@@ -1,0 +1,71 @@
+{
+  "$id": "https://logline.foundation/schemas/rit.publicacao_bilingue.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "payload"
+  ],
+  "properties": {
+    "payload": {
+      "type": "object",
+      "required": [
+        "artifact_id",
+        "kind",
+        "lang",
+        "pt",
+        "en",
+        "crosslink_proof"
+      ],
+      "properties": {
+        "artifact_id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "POL",
+            "RIT",
+            "DIR",
+            "DOC"
+          ]
+        },
+        "lang": {
+          "type": "array",
+          "minItems": 2,
+          "contains": {
+            "const": "pt-PT-cplp"
+          }
+        },
+        "pt": {
+          "type": "object",
+          "required": [
+            "hash_b3",
+            "link"
+          ]
+        },
+        "en": {
+          "type": "object",
+          "required": [
+            "hash_b3",
+            "link"
+          ]
+        },
+        "crosslink_proof": {
+          "type": "object",
+          "required": [
+            "pt_points_to_en",
+            "en_points_to_pt"
+          ],
+          "properties": {
+            "pt_points_to_en": {
+              "const": true
+            },
+            "en_points_to_pt": {
+              "const": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

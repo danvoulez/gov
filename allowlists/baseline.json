@@ -1,0 +1,10 @@
+{
+  "allowlistId": "baseline",
+  "version": "1.0",
+  "capabilities": [
+    "fs.read:/spans",
+    "wasm.mem.max:64MiB",
+    "time.now:deny",
+    "net.dial:deny"
+  ]
+}

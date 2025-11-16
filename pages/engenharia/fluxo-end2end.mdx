@@ -1,0 +1,36 @@
+---
+title: Fluxo End-to-End — Proposta → Voto → Ata → Execução
+description: Um exemplo real no ledger, com IDs e rastro verificável.
+---
+
+# Fluxo End-to-End (demo)
+
+Este exemplo mostra o ciclo completo: **proposta → rito de aprovação → votação → ata → política em vigor → diretiva → execução**.
+
+## IDs (para buscar no viewer)
+- Proposta: `SPAN-PROP-20251116-001`
+- Rito de aprovação: `RIT-AP-20251116-001`
+- Votação: `SPAN-VOTE-20251116-001`
+- Ata: `SPAN-MIN-20251116-001` / `MIN-20251116-001`
+- Política: `POL-20251116-TR-1.0`
+- Diretiva: `DIR-20251116-TR-EXEC-001`
+- Execução: `SPAN-EXEC-20251116-001`
+
+> Abra o **Ledger Viewer** e valide: `/transparencia/ledger`.
+
+## Encadeamento
+
+```mermaid
+flowchart LR
+  P[Proposta SPAN-PROP-20251116-001] --> R[RIT-AP-20251116-001 Rito: Aprovação de Política]
+  R --> V[Voto SPAN-VOTE-20251116-001]
+  V --> M[Minuta/Ata SPAN-MIN-20251116-001]
+  M --> POL[Política POL-20251116-TR-1.0 (IN_FORCE)]
+  POL --> DIR[Diretiva DIR-20251116-TR-EXEC-001]
+  DIR --> EX[Execução SPAN-EXEC-20251116-001]
+```
+
+- **RIT/POL/DIR** exigem `machine_gate: PASSED` e atestação do *policy_agent*.
+- Cada entrada tem **hash BLAKE3** e **assinatura Ed25519** sobre o **payload canonicalizado**.
+
+> Dica: rode `npm run demo:gen` para gerar chaves, calcular BLAKE3, assinar e marcar `machine_gate`/atestação. Depois veja o status “Assinatura verificada” no viewer.

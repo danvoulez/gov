@@ -1,0 +1,30 @@
+{
+  "type": "POL",
+  "id": "POL-PUC-1.0",
+  "title": "Compromisso de Uso Pacífico (PUC v1.0)",
+  "lang": [
+    "pt-PT-cplp",
+    "en"
+  ],
+  "payload": {
+    "prohibited": [
+      "militar",
+      "belico",
+      "ofensivo",
+      "violacao_dh"
+    ],
+    "allowed": [
+      "pessoal",
+      "comercial",
+      "educacional",
+      "pesquisa_civil"
+    ]
+  },
+  "usage_decl": {
+    "peaceful_only": true
+  },
+  "hash_b3": "TO_BE_COMPUTED",
+  "signature_ed25519": "TO_BE_COMPUTED",
+  "public_key": "PUBKEY_HEX",
+  "machine_gate": "REQUIRED"
+}
