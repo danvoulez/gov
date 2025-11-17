@@ -1,0 +1,27 @@
+{
+  "type": "POL",
+  "id": "POL-LANG-1.0",
+  "title": "Política de Língua — Português da CPLP (LP v1.0)",
+  "lang": [
+    "pt-PT-cplp",
+    "en"
+  ],
+  "payload": {
+    "dupla_canonicidade": true,
+    "tdln_required": true,
+    "ao90": true
+  },
+  "usage_decl": {
+    "peaceful_only": true,
+    "categories": [
+      "pessoal",
+      "comercial",
+      "educacional",
+      "pesquisa_civil"
+    ]
+  },
+  "hash_b3": "TO_BE_COMPUTED",
+  "signature_ed25519": "TO_BE_COMPUTED",
+  "public_key": "PUBKEY_HEX",
+  "machine_gate": "REQUIRED"
+}

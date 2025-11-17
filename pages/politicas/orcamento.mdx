@@ -1,0 +1,27 @@
+---
+title: Política de Orçamento (v1.0)
+description: Planejamento anual, execução vinculada por diretivas e prestação mensal.
+---
+
+import PeaceSeal from '../../components/PeaceSeal.jsx'
+
+# Política de Orçamento (v1.0) <PeaceSeal />
+
+**Objetivo**: garantir previsibilidade, rastreabilidade e eficiência no uso de recursos.
+
+## Estrutura
+- **Plano anual** com categorias e limites.
+- **Diretivas de execução** vinculadas a cada política aprovada.
+- **Prestação mensal** de execução e desvios com rito próprio.
+
+## Campos mínimos (JSON✯Atomic)
+```json
+{
+  "budget_plan":{"total":0,"breakdown":[{"category":"Auditoria & Compliance","amount":0}]},
+  "execution_spans":[]
+}
+```
+
+## SLOs
+- Primeiro relatório de execução: **30 dias** após aprovação.
+- Atualizações: **mensais**.

@@ -1,0 +1,45 @@
+{
+  "$id": "https://logline.foundation/schemas/jsonatomic.pol.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "allOf": [
+    {
+      "$ref": "jsonatomic.base.schema.json"
+    }
+  ],
+  "properties": {
+    "type": {
+      "const": "POL"
+    },
+    "lang": {
+      "type": "array",
+      "minItems": 2,
+      "contains": {
+        "const": "pt-PT-cplp"
+      },
+      "items": {
+        "type": "string"
+      }
+    },
+    "usage_decl": {
+      "type": "object",
+      "required": [
+        "peaceful_only"
+      ],
+      "properties": {
+        "peaceful_only": {
+          "const": true
+        }
+      }
+    },
+    "machine_gate": {
+      "enum": [
+        "PASSED",
+        "REQUIRED"
+      ]
+    }
+  },
+  "required": [
+    "lang",
+    "usage_decl"
+  ]
+}

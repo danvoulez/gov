@@ -1,0 +1,51 @@
+{
+  "type": "RIT",
+  "subtype": "instituir_regime_transitorio",
+  "id": "RIT-TR-YYYYMMDD-SEQ",
+  "policy": {
+    "vote_mode": "nominal",
+    "threshold": "2/3",
+    "quorum_rule": {
+      "P": "2/3"
+    }
+  },
+  "slo": {
+    "ata_resumo_hours": 24,
+    "ata_completa_hours": 72
+  },
+  "fields": {
+    "phase_dates": {
+      "t0_start": "2025-11-16",
+      "t0_end": "2025-12-15",
+      "t1_end": "2026-01-31",
+      "t2_end": "2026-03-31"
+    },
+    "caps": {
+      "eur": 25000,
+      "percent_budget": 10
+    },
+    "allowed_scope": [
+      "constituicao",
+      "politicas_base",
+      "auditoria",
+      "calendario",
+      "nomeacoes_interinas",
+      "ritos"
+    ],
+    "prohibited_scope": [
+      "mudanca_missao",
+      "compromissos_altos",
+      "alienacao_ativos"
+    ],
+    "ratification_window_days": 30
+  },
+  "machine_gate": "REQUIRED",
+  "compliance_attestation": {
+    "agent": "policy_agent",
+    "attested": false,
+    "checks": [],
+    "evidence": [],
+    "timestamp": null,
+    "signature_ed25519": null
+  }
+}

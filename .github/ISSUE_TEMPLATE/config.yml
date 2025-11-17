@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussão geral
+    url: https://github.com/ORG/REPO/discussions
+    about: Use para brainstorming e perguntas abertas.

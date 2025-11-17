@@ -1,0 +1,156 @@
+---
+title: Padrões
+description: JSON✯Atomic, LogLineOS e TDLN — Protocolos abertos para governança verificável
+slug: /padroes
+---
+
+# Padrões Abertos
+
+A LogLine Foundation desenvolve e mantém protocolos abertos para governança verificável e execução determinística.
+
+## JSON✯Atomic
+
+Protocolo determinístico com **BLAKE3 + Ed25519**, ledger JSONL e provas de inclusão.
+
+### Características Principais
+
+- **Canonicalização Determinística** — Mesma entrada sempre produz mesma saída
+- **Hashing com BLAKE3** — Separação por domínio, resistente a colisões
+- **Assinaturas Ed25519** — Conformidade com RFC 8032
+- **Ledger NDJSON** — Formato append-only, verificável linha a linha
+- **Provas de Inclusão** — Merkle trees e blockstamp chains
+
+### Casos de Uso
+
+- Registros de auditoria tamper-evident
+- Atas de reuniões verificáveis
+- Contratos e políticas versionadas
+- Transações governamentais
+
+### Documentação Técnica
+
+Consulte a **especificação completa** em [/spec/SPEC_FULL.md](/spec/SPEC_FULL.md):
+- §3.2 — JSON✯Atomic Ledger Entry Specification
+- §4.1 — BLAKE3 Hashing Protocol
+- §4.2 — Ed25519 Signature Protocol
+
+## LogLineOS
+
+Execução computável (spans) com políticas determinísticas, idempotência, RLS e observabilidade.
+
+### Arquitetura
+
+```
+Intent (NL) → Grammar → DRI → Orchestrator → Execution → Ledger Entry
+```
+
+- **Intents** — Requisições em linguagem natural
+- **Grammars** — Regras determinísticas de parsing (YAML DSL)
+- **DRI** — Deterministic Runnable Intent (plano executável)
+- **Orchestrator** — Motor de execução com allowlists
+- **Ledger** — Registro criptográfico de todas as operações
+
+### Garantias de Segurança
+
+- **Determinismo** — Mesma entrada = mesma execução
+- **Idempotência** — Executar N vezes = executar 1 vez
+- **Isolamento** — Row-Level Security (RLS) e sandboxing
+- **Observabilidade** — Cada passo registrado e assinado
+- **Auditabilidade** — Replay completo offline
+
+### Especificação
+
+- §5.1 — The Execution Engine & Orchestrator
+- §5.2 — WASM Compilation Target
+- §5.3 — Frontier Certificates & Explainability
+
+## TDLN (Typed Deterministic Language Notation)
+
+Tradução determinística NL→estrutura com provas criptográficas. Operação local (browser).
+
+### Conceito
+
+TDLN permite traduzir linguagem natural em estruturas tipadas e executáveis, mantendo:
+
+1. **Determinismo** — Mesma frase → mesma estrutura
+2. **Provas Criptográficas** — Hash da entrada + saída assinados
+3. **Execução Local** — Processamento no browser (privacidade)
+4. **Transparência** — Gramática versionada e auditável
+
+### Fluxo de Processamento
+
+```
+Texto Natural
+     ↓
+Grammar Matching (determinístico)
+     ↓
+Tie-Breaking (total order)
+     ↓
+DRI Generation
+     ↓
+Cryptographic Seal (hash + signature)
+     ↓
+Ledger Entry
+```
+
+### Aplicações
+
+- Contratos em linguagem simples com execução formal
+- Políticas governamentais human-readable + machine-executable
+- Atas de reuniões transformadas em ações computáveis
+- Ordens executivas verificáveis
+
+### Status de Desenvolvimento
+
+TDLN está em **especificação ativa**. Consulte:
+- §2.2 — Grammar Matching & Tie-Breaking Algorithm
+- §3.1 — DRI v2.1 Specification
+- §3.3 — Grammar DSL (YAML) v1.1
+
+---
+
+## Implementação de Referência
+
+A LogLine Foundation mantém implementações de referência em:
+
+- **JavaScript/Node.js** — Scripts de teste e verificação
+- **WASM** — Execução browser-native
+- **Rust** — Binários de produção (planejado)
+
+### Repositórios
+
+- `logline-protocol` — Especificação completa
+- `logline-httpd` — Servidor HTTP de referência
+- `logline-verify` — Verificador offline
+- `logline-wasm` — Compilação para WebAssembly
+
+## Conformidade e Testes
+
+Cada protocolo inclui:
+
+- **Test Vectors** — Entradas e saídas canônicas
+- **Conformance Suite** — Testes automatizados
+- **Reference Implementation** — Código de referência auditável
+
+Gere test vectors localmente:
+
+```bash
+npm install
+node scripts/gen_vectors.mjs
+cat vectors/logline_test_vectors.ndjson
+```
+
+---
+
+## Contribuir para os Padrões
+
+Para propor melhorias:
+
+1. Leia as [políticas de governança](/governanca)
+2. Submeta proposta ao **Comitê de Padrões**
+3. Inclua test vectors e análise de segurança
+4. Aguarde revisão pública (mínimo 7 dias)
+
+**Contato:** [/comites#comite-padroes](/comites#comite-padroes)
+
+**Última atualização:** 2025-11-16

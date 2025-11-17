@@ -1,0 +1,38 @@
+{
+  "type": "RIT",
+  "subtype": "nomeacao_interina",
+  "id": "RIT-NI-YYYYMMDD-SEQ",
+  "policy": {
+    "vote_mode": "nominal",
+    "threshold": ">=50%+1",
+    "quorum_rule": {
+      "N": ">=50%+1"
+    }
+  },
+  "slo": {
+    "ata_resumo_hours": 24,
+    "ata_completa_hours": 72
+  },
+  "fields": {
+    "office": "trustee|comite|secretaria",
+    "person": {
+      "name": "Nome Sobrenome",
+      "id": "P-XXX",
+      "declaration_of_interests": "hash://..."
+    },
+    "term": {
+      "start": "YYYY-MM-DD",
+      "end": "YYYY-MM-DD",
+      "interim": true
+    }
+  },
+  "machine_gate": "REQUIRED",
+  "compliance_attestation": {
+    "agent": "policy_agent",
+    "attested": false,
+    "checks": [],
+    "evidence": [],
+    "timestamp": null,
+    "signature_ed25519": null
+  }
+}

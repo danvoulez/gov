@@ -1,0 +1,26 @@
+{
+  "$id": "https://logline.foundation/schemas/jsonatomic.dir.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "allOf": [
+    {
+      "$ref": "jsonatomic.base.schema.json"
+    }
+  ],
+  "properties": {
+    "type": {
+      "const": "DIR"
+    },
+    "machine_gate": {
+      "enum": [
+        "PASSED",
+        "REQUIRED"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "payload"
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Anthropic RSP updates",
+    "url": "https://www.anthropic.com/rsp-updates"
+  },
+  {
+    "name": "NIST AI RMF 1.0 (PDF)",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+  },
+  {
+    "name": "NIST GAI Profile",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+  },
+  {
+    "name": "ISO/IEC 42001 overview",
+    "url": "https://www.iso.org/standard/42001"
+  },
+  {
+    "name": "Estonia KSI — e-Estonia",
+    "url": "https://e-estonia.com/solutions/cyber-security/ksi-blockchain/"
+  },
+  {
+    "name": "OpenAttestation overview (GovTech)",
+    "url": "https://www.developer.tech.gov.sg/products/categories/blockchain/openattestation/overview"
+  },
+  {
+    "name": "Open Contracting Data Standard",
+    "url": "https://standard.open-contracting.org/latest/en/"
+  },
+  {
+    "name": "UK Procurement Act — Transparency",
+    "url": "https://www.gov.uk/government/publications/the-official-procurement-act-2023-e-learning/module-2-transparency"
+  },
+  {
+    "name": "vTaiwan portal",
+    "url": "https://info.vtaiwan.tw/"
+  },
+  {
+    "name": "OpenRAIL (Hugging Face)",
+    "url": "https://huggingface.co/blog/open_rail"
+  }
+]

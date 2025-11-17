@@ -1,0 +1,10 @@
+{
+  "type": "DRI/2.1",
+  "id": "dri-pol-001",
+  "action": "publish_policy",
+  "params": {
+    "policy_id": "pol-001",
+    "effect": "allow",
+    "capability": "ledger.commit"
+  }
+}

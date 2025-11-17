@@ -1,0 +1,73 @@
+--- comparativo_old.mdx
++++ comparativo_new.mdx
+@@ -1,16 +1,61 @@
+ ---
+ title: Comparativo & Radar
+-description: Quem já faz, acertos, erros — com fontes e provas.
++description: Quem já faz (ou parte), os acertos, os erros — e onde a Fundação se diferencia.
+ ---
+ 
+-# Comparativo & Radar (prévia)
++# Comparativo & Radar
+ 
+-Nesta página vamos demonstrar — com **fontes** e **links verificáveis** — o cenário atual de governança digital/IA e transparência verificável.
++Abaixo, referências **oficiais** e **benchmarking** para calibrar nossa governança computável.
+ 
+-## Seções (a serem preenchidas com evidências)
+-- **Quem já faz (ou partes):** labs de IA, governos, padrões e ONGs.
+-- **Acertos a copiar:** linhas vermelhas, infra de avaliação, dados abertos e verificação pública.
+-- **Erros a evitar:** pdf-washing, avaliações opacas, governança on-chain ingênua, licenças éticas incompatíveis.
+-- **Onde a Fundação se diferencia:** ledger por decisão, “machine gate”, PT–EN por padrão, uso pacífico computável.
++## 1) Quem já faz (ou partes do que queremos)
+ 
+-> Esta seção será completada com **citações web** e trechos-chave na próxima mensagem.
++- **Anthropic – Responsible Scaling Policy (RSP):** política pública de *gates* por níveis de capacidade (ASL), com compromisso explícito de não escalar sem salvaguardas adequadas.  
++  Links: [RSP – site oficial](https://www.anthropic.com/rsp-updates) · [Resumo técnico recente](https://digital.nemko.com/news/anthropic-ai-safety-strategy-what-enterprises-must-know)
++
++- **NIST — AI RMF + Perfil para GenAI (GAI):** framework de risco voluntário (1.0) e perfil específico para GenAI (2024).  
++  Links: [AI RMF 1.0 (PDF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) · [Perfil GAI (site)](https://www.nist.gov/itl/ai-risk-management-framework)
++
++- **ISO/IEC 42001 (AIMS):** primeiro **sistema de gestão** para IA (publicado 2023).  
++  Links: [ISO oficial](https://www.iso.org/standard/42001) · [Visão prática](https://learn.microsoft.com/en-us/compliance/regulatory/offering-iso-42001)
++
++- **Estônia — KSI Blockchain + X-Road:** integridade verificável e trilhas de auditoria públicas; *linked timestamping* estatal.  
++  Links: [e-Estonia (KSI)](https://e-estonia.com/solutions/cyber-security/ksi-blockchain/) · [Guardtime/Estado](https://showroom.demos.guardtime.com/1-ksi-stack.html)
++
++- **Singapura — OpenAttestation (OA) / OpenCerts / FileSG:** padrão aberto de **documentos verificáveis** com verificador público.  
++  Links: [OA (GovTech)](https://www.developer.tech.gov.sg/products/categories/blockchain/openattestation/overview) · [OpenAttestation.com](https://www.openattestation.com/) · [FileSG (FAQ)](https://www.file.gov.sg/faq/file-type-and-format)
++
++- **Transparência de compras — OCDS + Reino Unido (Procurement Act):** ciclo contratual aberto por dados e regime de *transparency notices*.  
++  Links: [OCDS (docs)](https://standard.open-contracting.org/latest/en/) · [Open Contracting Partnership](https://www.open-contracting.org/data-standard/) · [UK — módulo de transparência](https://www.gov.uk/government/publications/the-official-procurement-act-2023-e-learning/module-2-transparency)
++
++- **Deliberação pública — vTaiwan + pol.is:** consultas em larga escala (caso Uber) com síntese de consenso.  
++  Links: [Portal vTaiwan](https://info.vtaiwan.tw/) · [Case study (academia)](https://congress.crowd.law/files/vtaiwan-case-study.pdf)
++
++- **Licenças éticas/uso responsável:** RAIL/OpenRAIL e Hippocratic License (HL3) como opções **não-OSI**, úteis em certos artefatos.  
++  Links: [OpenRAIL (Hugging Face)](https://huggingface.co/blog/open_rail) · [RAIL FAQ](https://www.licenses.ai/faq-2) · [Hippocratic HL3](https://firstdonoharm.dev/)
++
++- **Alertas de governança on‑chain (lições):** Beanstalk (flash loan + proposta sem timelock), Mango Markets (manipulação de oracle), Compound (bug em proposta).  
++  Links: [Immunefi — Beanstalk](https://immunefi.com/blog/bug-fix-reviews/hack-analysis-beanstalk-governance-attack-april-2022/) · [SEC — Mango](https://www.sec.gov/newsroom/press-releases/2023-13) · [The Block — Compound P62](https://www.theblock.co/linked/119086/compound-bug-comp-risk-misreward)
++
++---
++
++## 2) O que copiar (acertos)
++1. **Linhas vermelhas + *gates*** proporcionais à capacidade (Anthropic RSP).  
++2. **Gestão certificável** (ISO/IEC 42001) acoplada ao **NIST AI RMF/GAI** para o dia a dia.  
++3. **Infra de verificação pública** (Estônia KSI / Singapura OA) com **verificador aberto**.  
++4. **Dados abertos do ciclo contratual** (OCDS + regime UK de *notices*).  
++5. **Participação em escala** (vTaiwan/pol.is) com síntese computável.
++
++## 3) Erros comuns (evitar)
++- **PDF‑washing:** políticas bonitas sem **cadeia de prova** e sem execução.  
++- **Avaliações opacas:** testes não reproduzíveis, sem datasets públicos e *safety cases*.  
++- **Governança on‑chain ingênua:** sem *timelock*, *circuit breaker*, quórum e defesa anti‑Sybils.  
++- **Licenças éticas sem plano de compatibilidade:** risco de atrito com ecossistema open‑source.
++
++## 4) Onde a Fundação se diferencia
++- **Ledger por decisão** (JSON✯Atomic) com **BLAKE3 + Ed25519** e *machine gate* obrigatório.  
++- **Provas “por padrão”**: verificador local (CLI/API) e página pública com status.  
++- **Bilingue PT‑EN (CPLP como língua companheira)** em todos os artefatos normativos.  
++- **Uso pacífico** **executável** (declaração obrigatória + auditoria).  
++- **Ritos participativos computáveis** (assembléias com pol.is → commits no ledger).
++
++> Precisa de referências adicionais? Veja o **Radar de notícias** na página para reportagens e atualizações.

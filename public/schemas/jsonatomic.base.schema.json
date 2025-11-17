@@ -1,0 +1,55 @@
+{
+  "$id": "https://logline.foundation/schemas/jsonatomic.base.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "type",
+    "id"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "SPAN",
+        "POL",
+        "RIT",
+        "DIR"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "title": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "machine_gate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "PASSED",
+        "REQUIRED",
+        "BLOCKED",
+        null
+      ]
+    },
+    "compliance_attestation": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "lang": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

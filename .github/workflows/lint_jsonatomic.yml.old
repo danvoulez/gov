@@ -1,0 +1,8 @@
+name: PR Checks — JSON✯Atomic Lint (stub)
+on: [pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/jsonatomic_lint.mjs || true
